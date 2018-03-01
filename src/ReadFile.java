@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class ReadFile {
 
-    ArrayList<Line> lines = new ArrayList<>();
-    FirstLine firstLine;
+    private ArrayList<Line> lines = new ArrayList<>();
+    private FirstLine firstLine;
 
     public ReadFile(String s) throws FileNotFoundException {
         BufferedReader br = new BufferedReader(new FileReader("a_example.in"));
@@ -34,5 +34,12 @@ public class ReadFile {
         }
     }
 
+    public ArrayList<Line> getLines() {
+        return lines;
+    }
+
+    public FirstLine getFirstLine() {
+        return firstLine;
+    }
 }
 
