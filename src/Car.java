@@ -37,8 +37,12 @@ public class Car {
 
     public void setPassenger(Passenger passenger) {
         this.passenger = passenger;
+        hasPassenger = true;
     }
 
+    public void dropPassenger() {
+        hasPassenger = false;
+    }
 
 
 }
