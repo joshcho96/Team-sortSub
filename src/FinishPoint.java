@@ -1,7 +1,7 @@
 public class FinishPoint {
 
     private int row;
-    privare int column;
+    private int column;
 
     FinishPoint(int row, int column) {
         this.row = row;
