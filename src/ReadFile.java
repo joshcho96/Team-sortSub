@@ -25,7 +25,7 @@ public class ReadFile {
                 LatestFinish lf = new LatestFinish(Integer.parseInt(lineArray[5]));
 
 
-                Line objLine = new Line(sp,fp,es,lf);
+                Line objLine = new Passenger(sp,fp,es,lf);
                 lines.add(objLine);
             }
 
