@@ -1,4 +1,4 @@
-public class Passenger {
+public class Passenger extends Line {
 
     private EarlisetStart es;
     private LatestStart ls;
