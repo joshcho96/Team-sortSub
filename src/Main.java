@@ -2,7 +2,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class Main {
-
+  
     public static void main(String[] args) throws FileNotFoundException {
         ReadFile fileReader = new ReadFile("a_example.in");
 
@@ -22,5 +22,4 @@ public class Main {
         line.getSp();
         // Object Line
     }
-
 }
