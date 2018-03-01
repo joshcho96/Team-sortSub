@@ -13,5 +13,7 @@ public class LatestFinish {
         this.latestTime = latestTime;
     }
 
-    
+    public int getLatestTime() {
+        return latestTime;
+    }
 }

@@ -1,25 +1,40 @@
-public class Passenger {
+public class Passenger extends Line{
 
-    private EarlisetStart es;
-    private LatestStart ls;
+    private EarliestStart es;
+    private LatestFinish ls;
     private StartingPoint sp;
     private FinishPoint fp;
     private boolean inTheCar;
     private Car car;
+    private int distance;
+    private int finishTime;
 
-    Passenger(StartingPoint sp, FinishPoint fp, EarlisetStart es, LatestStart ls) {
+    public int timeToFinish(int currentTime) {
+         finishTime = ls.getLatestTime() - currentTime;
+         return finishTime;
+    }
+
+    public int bonusTime(int currentTime) {
+        return finishTime - distance;
+    }
+
+
+
+    Passenger(StartingPoint sp, FinishPoint fp, EarliestStart es, LatestFinish ls) {
+        super(sp,fp,es,ls);
         this.sp = sp;
         this.fp = fp;
         this.es = es;
         this.ls = ls;
         inTheCar = false;
+        distance = Math.abs(fp.getRow() - sp.getRow()) + Math.abs(fp.getColumn() - sp.getColumn());
     }
 
     public StartingPoint getSp() {
         return sp;
     }
 
-    public EarlisetStart getEs() {
+    public EarliestStart getEs() {
         return es;
     }
 
@@ -27,7 +42,7 @@ public class Passenger {
         return fp;
     }
 
-    public LatestStart getLs() {
+    public LatestFinish getLs() {
         return ls;
     }
 
@@ -43,5 +58,9 @@ public class Passenger {
     public void getOutFromTheCar() {
         this.car = null;
         inTheCar = false;
+    }
+
+    public int getDistance() {
+        return distance;
     }
 }
