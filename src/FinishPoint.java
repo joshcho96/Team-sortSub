@@ -1,8 +1,11 @@
 public class FinishPoint {
 
     private int row;
-    private int column;
+    privare int column;
 
+    /**
+     * The constructor of the FinishPoint.    
+     */
     FinishPoint(int row, int column) {
         this.row = row;
         this.column = column;
