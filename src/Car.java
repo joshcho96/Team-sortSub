@@ -54,9 +54,13 @@ public class Car {
 
     public void setPassenger(Passenger passenger){
         this.passenger = passenger;
+        hasPassenger = true;
         onJourney = true;
     }
 
+    public void dropPassenger() {
+        hasPassenger = false;
+    }
 
     public void dropPassenger() {
         onJourney = false;
