@@ -7,7 +7,7 @@ public class CalcDistance {
         this.start = start;
     }
 
-   
+
     public int Distance() {
         int distance = Math.abs(finish.getRow() - start.getRow()) + Math.abs(finish.getColumn() - start.getColumn());
         return distance;
